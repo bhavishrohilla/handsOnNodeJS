@@ -44,7 +44,12 @@ app.get("/my-works", (req,res) => {
 });
 
 app.get("/contact", (req,res) => {
-    res.sendFile(__dirname + "/src/contact.html");
+    // res.sendFile(__dirname + "/src/contact.html");
+    const data = {
+        email : "bhavishrohilla59@gmail.com"
+    }
+
+    res.render("contact", {data});
 });
 
 
